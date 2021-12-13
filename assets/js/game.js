@@ -81,8 +81,25 @@ var startGame = function () {
             window.alert("You have lost your robot in battle! Game over!");
             break;
         }
+    endGame();
     }
-    startGame();
+};
+
+var endGame = function () {
+    // if Player is still alive, player wins!
+    if (playerHealth > 0) {
+        window.alert("Great job, you've survived the game! You now have a score of " + playerMoney + ".");
+    } else {
+    window.alert ("The game has now ended. Let's see how you did!");
+    }
+    var playAgainConfirm = window.confirm("Would you like to play again?");
+
+    if (playAgainConfirm) {
+        startGame ();
+    } 
+    else { 
+        window.alert("Thank you for playing Robot Gladiators! Come back soon!");
+    }
 };
 
 startGame();
