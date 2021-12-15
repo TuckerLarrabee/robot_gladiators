@@ -24,3 +24,14 @@ if (num === 1) {
 } else {
     console.log ("The variable was something else");
 }
+
+
+if (Math.random() > 0.5) {
+    console.log(heads);
+} else {
+    console.log(tails);
+}
+
+
+
+// If it is the player robots turn, prompt fightOrSkip
