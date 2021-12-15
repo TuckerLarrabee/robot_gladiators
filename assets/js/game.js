@@ -76,7 +76,6 @@ var startGame = function () {
             window.alert("Welcome to Robot Gladiators! Round " + (i + 1));
         var pickedEnemyObj = enemyInfo[i];
         pickedEnemyObj.health = randomNumber(40,60);
-        // debugger;
         fight(pickedEnemyObj);
         } else {
             window.alert("You have lost your robot in battle! Game over!");
@@ -116,16 +115,13 @@ var shop = function () {
        "would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one: 'REFILL', 'UPGRADE', OR 'LEAVE' to make a choice."
    );
    switch (shopOptionPrompt) {
-       case 'REFILL': //new case
-       case 'refill':
+        case 1:
            playerInfo.refillHealth();
            break;      
-        case 'UPGRADE':
-        case 'upgrade':
+        case 2:
             playerInfo.upgradeAttack();
             break;
-        case 'LEAVE':
-        case 'leave':
+        case 3:
             window.alert("Leaving the store.");
             break;
         default:
