@@ -26,7 +26,7 @@ var fightOrSkip = function () {
 
             return true;
         }
-    }
+    } 
     return false;
 }
 
@@ -112,8 +112,9 @@ var endGame = function () {
 var shop = function () {
    //ask player what they'd like to do
    var shopOptionPrompt = window.prompt (
-       "would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one: 'REFILL', 'UPGRADE', OR 'LEAVE' to make a choice."
+       "Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter 1 for REFILL, 2 for UPGRADE, OR 3 for LEAVE."
    );
+   shopOptionPrompt = parseInt(shopOptionPrompt); 
    switch (shopOptionPrompt) {
         case 1:
            playerInfo.refillHealth();
